@@ -19,4 +19,4 @@ check: $(OBJ_CHECK)
 	$(CC) -o $@ $^ $(CFLAGS)
 	
 clean:
-	rm *.o main
+	rm *.o main check
