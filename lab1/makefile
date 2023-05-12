@@ -1,6 +1,5 @@
 CC = gcc
-CFLAGS = -I
-DEPS = getname.h
+CFLAGS = -Wall
 OBJ_MAIN = main.o getname.o
 OBJ_CHECK = check.o getname.o
 
@@ -9,14 +8,20 @@ debug: main check
 
 all: main check
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-	
 main: $(OBJ_MAIN)
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) $(CFLAGS) -o main $(OBJ_MAIN)
+
+main.o: main.c getname.h
+	$(CC) $(CFLAGS) -c main.c
+	
+getname.o: getname.c getname.h
+	$(CC) $(CFLAGS) -c getname.c
 	
 check: $(OBJ_CHECK)
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) $(CFLAGS) -o check $(OBJ_CHECK)
+	
+check.o: check.c getname.h
+	$(CC) $(CFLAGS) -c check.c
 	
 clean:
-	rm *.o main check
+	$(RM) main check *.o *~
