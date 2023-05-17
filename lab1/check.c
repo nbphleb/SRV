@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <string.h>
-#include "getname.h"
 
 int main(void)
 {
-	char truename[] = "Asonova Svetlana Borisovna I992";
-	if (strcmp(truename, getName()) == 0)
+	char buf[100];
+	char truename[] = "Asonova Svetlana I992";
+	while (gets(buf))
 	{
-		printf("Name is correct \n");
-		return 0;
-	}
-	else
-	{
-		printf("Name is incorrect \n");
-		return 1;
+		if (strcmp(truename, buf) == 0)
+		{
+			printf("Name is correct \n");
+			return 0;
+		}
+		else
+		{
+			printf("Name is incorrect \n");
+			return 1;
+		}
 	}
 }
