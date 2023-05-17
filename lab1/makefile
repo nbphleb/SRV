@@ -9,5 +9,5 @@ main: main.c
 check: check.c
 	gcc -o check check.c
 	
-clean:
+clear:
 	$(RM) main check main_debug *.o *~
