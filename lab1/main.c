@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include "getname.h"
 
 int main(void)
 {
-	printf(getName());
+	printf("Asonova Svetlana I992");
 	printf("\n");
 	return 0;
 }
