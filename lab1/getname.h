@@ -1,5 +1,5 @@
 #ifndef GETNAME_H
-#define GETNAME_H
+  #define GETNAME_H
 
 char* getName();
 
