@@ -1,5 +1,5 @@
-#include "getname.h"
 #include <stdio.h>
+#include "getname.h"
 
 char* getName()
 {
