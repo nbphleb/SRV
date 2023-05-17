@@ -10,4 +10,4 @@ check: check.c
 	gcc -o check check.c
 	
 clean:
-	$(RM) main check debug_main *.o *~
+	$(RM) main check main_debug *.o *~
